@@ -30,6 +30,7 @@
 		0B1005311F2E76260016843C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Public.storyboard; sourceTree = "<group>"; };
 		0B1005361F2E88EC0016843C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Private.storyboard; sourceTree = "<group>"; };
 		0B1005381F2E8A3D0016843C /* MyBootManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBootManager.swift; sourceTree = "<group>"; };
+		0B1517061F2FC12100ABEAC3 /* boot.sequence */ = {isa = PBXFileReference; lastKnownFileType = text; path = boot.sequence; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,7 @@
 		0B1005081F2E6BFF0016843C = {
 			isa = PBXGroup;
 			children = (
+				0B1517051F2FC12100ABEAC3 /* docs */,
 				0B1005281F2E6C5A0016843C /* Architecture */,
 				0B1005131F2E6BFF0016843C /* Sandbox */,
 				0B1005121F2E6BFF0016843C /* Products */,
@@ -106,6 +108,22 @@
 				0B1005351F2E88EC0016843C /* Private.storyboard */,
 			);
 			path = Project;
+			sourceTree = "<group>";
+		};
+		0B1517051F2FC12100ABEAC3 /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				0B1517071F2FC15D00ABEAC3 /* websequencediagrams.com */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		0B1517071F2FC15D00ABEAC3 /* websequencediagrams.com */ = {
+			isa = PBXGroup;
+			children = (
+				0B1517061F2FC12100ABEAC3 /* boot.sequence */,
+			);
+			path = websequencediagrams.com;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
