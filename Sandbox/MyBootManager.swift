@@ -17,7 +17,7 @@ class MyBootManager : FlowCoordinatorManager{
     required init(){
         self.configurations = [CoordinableStoryBoard]()
         self.configurations.append(CoordinableStoryBoard(isDefault: true, priority: ._default, sotoryBoardId: "Public", conditional: {true}))
-        self.configurations.append(CoordinableStoryBoard(isDefault: false, priority: ._normal,sotoryBoardId: "Private", conditional: {true}))
+        self.configurations.append(CoordinableStoryBoard(isDefault: false, priority: ._normal,sotoryBoardId: "Private", conditional: {false}))
         self.configurations.append(CoordinableStoryBoard(isDefault: false, priority: ._mandatory, sotoryBoardId: "MandatoryUpdate", conditional: {false}))
         self.configurations.append(CoordinableStoryBoard(isDefault: false, priority: ._bloquer, sotoryBoardId: "Mantainance", conditional: {false}))
     }

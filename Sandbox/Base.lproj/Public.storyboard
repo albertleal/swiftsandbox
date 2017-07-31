@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fE2-RN-mKG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wellcome-->
+        <scene sceneID="gE4-ag-lPx">
+            <objects>
+                <viewController id="hrr-kd-oKU" customClass="ViewController" customModule="Sandbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jc6-PA-2ig">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-3F-XTm">
+                                <rect key="frame" x="164" y="260" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="olh-g2-2mb" kind="show" id="XEC-HR-N1Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dsg-3F-XTm" firstAttribute="centerY" secondItem="jc6-PA-2ig" secondAttribute="centerY" id="0r6-I4-NwA"/>
+                            <constraint firstItem="dsg-3F-XTm" firstAttribute="centerX" secondItem="jc6-PA-2ig" secondAttribute="centerX" id="fl7-Oq-R7l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y0s-o0-rWh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wellcome" id="2kR-xb-4Ur"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSP-FD-XaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="336"/>
+        </scene>
+        <!--Second Page-->
+        <scene sceneID="Pck-yy-udW">
+            <objects>
+                <viewController id="olh-g2-2mb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gap-rk-UZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="ccJ-xV-Kdt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Second Page" id="GiV-qb-G5K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJk-DV-feH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="336"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nIm-c6-41f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fE2-RN-mKG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="cUB-vM-m5D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hrr-kd-oKU" kind="relationship" relationship="rootViewController" id="aKv-Xr-GiG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sY7-bK-YqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-332" y="321"/>
+        </scene>
+    </scenes>
+</document>

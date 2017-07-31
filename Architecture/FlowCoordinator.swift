@@ -60,7 +60,7 @@ class FlowCoordinator : FlowCoordinatorDelegate{
             self.baseStoryBoard = storyBoard
             self.baseController = self.baseStoryBoard?.instantiateInitialViewController()
             
-            if var coordinable = self.baseController as? Coordinable {
+            if let coordinable = self.baseController as? Coordinable {
                 coordinable.coordinator = self
             }
             
@@ -81,9 +81,17 @@ class FlowCoordinator : FlowCoordinatorDelegate{
 protocol FlowCoordinatorManager : class {
     var configurations: [CoordinableStoryBoard]{get set}
 }
+protocol CoordinableDelegate: class{
+    var coordinator : FlowCoordinatorDelegate?{get set}
+}
 
-protocol Coordinable {
-    var coordinator : FlowCoordinatorDelegate? {get set}
+class Coordinable : UIViewController, CoordinableDelegate{
+    var coordinator : FlowCoordinatorDelegate?
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextStep = segue.destination as? Coordinable {
+            nextStep.coordinator = self.coordinator
+        }
+    }
 }
 
 enum FlowTransition{
