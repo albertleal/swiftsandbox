@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Coordinable {
+    var coordinator: Coordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,4 +23,3 @@ class ViewController: UIViewController {
 
 
 }
-
