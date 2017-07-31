@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: Coordinator
 protocol Coordinator: class{
     var window : UIWindow? {get set}
     var baseStoryBoard : UIStoryboard? {get set}
@@ -27,21 +28,26 @@ extension Coordinator {
     }
 }
 
+// MARK: Coordinator Transition
 enum CoordinatorTransition{
     case window(String)
 }
 
+// MARK: Managed Coordinator
 protocol ManagedCoordinator: Coordinator{
-    var manager : CoordinatorManager? {get}
+    var manager: CoordinatorManager? { get }
+    var currentTransition: CoordinatorTransition?{ get }
     init(withManager manager: CoordinatorManager)
     init(withManager manager: CoordinatorManager, onWindow window: UIWindow)
     func start()
 }
 
+// MARK: Coordinator Managed
 protocol CoordinatorManager : class {
     
 }
 
+// MARK: Coordinable
 protocol Coordinable {
     var coordinator : Coordinator? {get set}
 }
