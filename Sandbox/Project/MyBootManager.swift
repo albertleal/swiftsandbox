@@ -10,37 +10,15 @@
 
 import UIKit
 
-class MyBootManager : BootCoordinatorManager{
+
+class MyBootManager : FlowCoordinatorManager{
+    var configurations: [CoordinableStoryBoard]
+    
     required init(){
-        
-    }
-    
-    // MARK: StoryBoard IDS
-    var publicStoryboardID: String = "Public"
-    
-    var privateStoryboardID: String? = "Private"
-    
-    var mandatoryUpdateStoryboardID: String? = nil
-    
-    var mantainanceStoryboardID: String? = nil
-    
-    // MARK: Public API
-    func canNavigateToPrivate() -> Bool {
-        //  Implement Logic to controll
-        //  user credentials and session
-        return true
-    }
-    
-    func isMandatoryUpdateRequired() -> Bool {
-        //  Implement Logic to detect
-        //  if theres any mandatory update required
-        return false
-    }
-    
-    func isMantainanceRequired() -> Bool {
-        //  Implement Logic to detect
-        //  if theres any down
-        //  including backend or third party systems
-        return false
+        self.configurations = [CoordinableStoryBoard]()
+        self.configurations.append(CoordinableStoryBoard(isDefault: true, priority: ._default, sotoryBoardId: "Public", conditional: {true}))
+        self.configurations.append(CoordinableStoryBoard(isDefault: false, priority: ._normal,sotoryBoardId: "Private", conditional: {true}))
+        self.configurations.append(CoordinableStoryBoard(isDefault: false, priority: ._mandatory, sotoryBoardId: "MandatoryUpdate", conditional: {false}))
+        self.configurations.append(CoordinableStoryBoard(isDefault: false, priority: ._bloquer, sotoryBoardId: "Mantainance", conditional: {false}))
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, Coordinable {
-    var coordinator: Coordinator?
+    var coordinator: FlowCoordinatorDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()

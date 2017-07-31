@@ -38,4 +38,3 @@ note left of "UIViewcontroller: Coordinable": set Coordinable on coordined UIVie
 note left of UIWindow: present Storyboard
 "BootCoordinator : ManagedCoordinator"-->UIWindow: set {rootViewController} = UIViewcontroller: Coordinable
 "BootCoordinator : ManagedCoordinator"->UIWindow: makeKeyAndVisible
-
