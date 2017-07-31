@@ -4,6 +4,7 @@ AppDelegate->+"MyBootManager: BootCoordinatorManager": init()
 "MyBootManager: BootCoordinatorManager"-->AppDelegate: MyBootManager: BootCoordinatorManager
 
 AppDelegate->+"BootCoordinator : ManagedCoordinator": init(BootCoordinatorManager, UIWindow)
+"BootCoordinator : ManagedCoordinator"-->AppDelegate: BootCoordinator : ManagedCoordinato
 
 note left of "BootCoordinator : ManagedCoordinator": get Storyboard IDs
 "MyBootManager: BootCoordinatorManager"-->"BootCoordinator : ManagedCoordinator": get {publicStoryboardID}
@@ -29,8 +30,12 @@ note left of "UIStoryboard": get Initial View Controller from Storyboard
 
 "BootCoordinator : ManagedCoordinator"->+UIStoryboard: init(name: bootTransition)
 "BootCoordinator : ManagedCoordinator"->UIStoryboard: instantiateInitialViewController()
+UIStoryboard --> "BootCoordinator : ManagedCoordinator": UIVIewcontroller : Coordinable
 
-UIStoryboard --> "BootCoordinator : ManagedCoordinator": defaultViewController
+note left of "UIViewcontroller: Coordinable": set Coordinable on coordined UIViewcontroller
+"BootCoordinator : ManagedCoordinator"->+"UIViewcontroller: Coordinable": set {coordinator} = self
 
-"BootCoordinator : ManagedCoordinator"-->UIWindow: set {rootViewController} = defaultViewController
+note left of UIWindow: present Storyboard
+"BootCoordinator : ManagedCoordinator"-->UIWindow: set {rootViewController} = UIViewcontroller: Coordinable
 "BootCoordinator : ManagedCoordinator"->UIWindow: makeKeyAndVisible
+
