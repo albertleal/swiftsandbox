@@ -12,7 +12,7 @@
         <!--Wellcome-->
         <scene sceneID="gE4-ag-lPx">
             <objects>
-                <viewController id="hrr-kd-oKU" customClass="ViewController" customModule="Sandbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hrr-kd-oKU" customClass="WellcomeViewController" customModule="Sandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jc6-PA-2ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="164" y="260" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="olh-g2-2mb" kind="show" id="XEC-HR-N1Q"/>
+                                    <segue destination="olh-g2-2mb" kind="show" identifier="toSecondPage" id="XEC-HR-N1Q"/>
                                 </connections>
                             </button>
                         </subviews>
