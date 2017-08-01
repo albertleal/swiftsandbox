@@ -11,20 +11,12 @@ class OnBoardingFlowModel : FlowCoordinatorModel{
     var storyBoardOptions: [String : CoordinableStoryBoard]?
     var sieguesOptions: [String: CoordinableSiegues]?
     
+    var onBoardingModel: OnBoardingModel
     
     required init(){
         //make the keys accesible by id, so we can trigger it from protocols
         self.onBoardingModel = OnBoardingModel()
         
         self.sieguesOptions = [ "first" : CoordinableSiegues(priority: ._onStart, sieguedId: "toSecondPage", conditional: {true})]
-    }
-    
-    private var onBoardingModel : OnBoardingModel
-    var userName: String{
-        get{
-            return self.onBoardingModel.name
-        }set(newValue){
-            self.onBoardingModel.name = newValue
-        }
     }
 }

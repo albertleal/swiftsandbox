@@ -7,9 +7,7 @@
 //
 //  Boot Impleentation as an example of Project Boot
 //
-
 import UIKit
-
 
 class BootFlowModel : BootCoordinatorModel{
     var storyBoardOptions: [String : CoordinableStoryBoard]?

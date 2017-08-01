@@ -7,21 +7,27 @@
 //
 
 import Foundation
-class OnBoardingFlowCoordinator : FlowCoordinator,
-    WellcomeViewCoordinableDelegate
-{
-    private var onBoardingModel : OnBoardingFlowModel?
-    
-    func nextStep(controller: WellcomeViewController) {
-        self.onBoardingModel = self.flowModel as? OnBoardingFlowModel
-        self.onBoardingModel?.userName = "tontorron"
-        
-        //call to force step
-        self.step(fromCoordinable: controller)
+class OnBoardingFlowCoordinator : FlowCoordinator, WellcomeViewCoordinableDelegate, LoginViewCoordinableDelegate {
+    private var onBoardingFlowModel : OnBoardingFlowModel?
+
+    func nextStep(withModel model: ModelDelegate, coordinable: WellcomeViewController) {
+        print("nextStep\t\tWellcomeViewController")
+        self.onBoardingFlowModel?.onBoardingModel.wellcomeModel = (model as! WellcomeModel)
+        self.performTransition(transition: FlowTransition.popUp("toSecondPage"))
     }
     
-    
+    func nextStep(withModel model: ModelDelegate, coordinable: SignInViewController) {
+        print("nextStep\t\tWellcomeViewController")
+        
+        self.onBoardingFlowModel?.onBoardingModel.signInModel = (model as! SignInModel)
+        self.performTransition(transition: FlowTransition.popUp("toPrivateStoryBoard"))
+    }
 }
+
 protocol WellcomeViewCoordinableDelegate: class{
-    func nextStep(controller: WellcomeViewController)
+    func nextStep(withModel model: ModelDelegate, coordinable: WellcomeViewController)
+}
+
+protocol LoginViewCoordinableDelegate: class{
+    func nextStep(withModel model: ModelDelegate, coordinable: SignInViewController)
 }

@@ -21,7 +21,7 @@ protocol FlowCoordinatorDelegate: class{
     var currentCoordinable: Coordinable?{get set}
     var flowModel: FlowCoordinatorModel? {get set}
     func performTransition(transition: FlowTransition)
-    func step(fromCoordinable currentStep : Coordinable)
+    func nextStep()
     init()
     init(withFlowModel model: FlowCoordinatorModel, onCoordinable coordinable: Coordinable)
 }
@@ -59,7 +59,7 @@ class FlowCoordinator : FlowCoordinatorDelegate{
         }
     }
 
-    func step(fromCoordinable currentStep : Coordinable){
+    func nextStep(){
         if(self.currentTransition != nil){
             self.performTransition(transition: self.currentTransition!)
             self.currentTransition = nil

@@ -75,6 +75,8 @@ class BootCordinator : BootCordinatorDelegate{
     }
     
     func start(){
+        print("Start\t \(currentTransition.debugDescription)")
+        
         if(self.currentTransition != nil){
             self.performTransition(transition: self.currentTransition!)
             self.currentTransition = nil

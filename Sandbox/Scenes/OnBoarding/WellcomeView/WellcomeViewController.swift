@@ -9,31 +9,16 @@
 import UIKit
 
 class WellcomeViewController: Coordinable {
-    var viewModel : WellcomeViewModel?;
-    
     override func awakeFromNib() {
         self.coordinator = OnBoardingFlowCoordinator(withFlowModel: OnBoardingFlowModel(), onCoordinable: self)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //Setting ViewModel
+    override func loadView() {
+        super.loadView()
         self.viewModel = WellcomeViewModel()
-        if(self.coordinator != nil){
-            self.coordinator!.step(fromCoordinable: self);
-        
-            // Do any additional setup after loading the view, typically from a nib.
-            if(self.viewModel?.getTitle != nil){
-                self.navigationItem.title? = (self.viewModel?.getTitle)!
-            }
-        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func loginButtontTapped(_ sender: UIButton) {
+        let coordinator = (self.coordinator as! OnBoardingFlowCoordinator)
+        coordinator.nextStep(withModel: (self.viewModel?.model)!, coordinable: self)
     }
-
-
+    
 }

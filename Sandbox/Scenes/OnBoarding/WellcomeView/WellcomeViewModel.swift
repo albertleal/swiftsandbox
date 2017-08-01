@@ -7,18 +7,9 @@
 //
 
 import Foundation
-class WellcomeViewModel{
-    private var wellcomeModel : WellcomeModel
-    
-    init(){
-        self.wellcomeModel = WellcomeModel()
-    }
-    
-    init(withModel model: WellcomeModel){
-        self.wellcomeModel = model
-    }
-    
-    var getTitle: String {
-        return self.wellcomeModel.title
+class WellcomeViewModel: ViewModelDelegate{
+    var model: ModelDelegate
+    required init() {
+        self.model = WellcomeModel()
     }
 }

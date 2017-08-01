@@ -7,6 +7,12 @@
 //
 
 import Foundation
-struct OnBoardingModel{
-    var name: String = "Wellcome"
+protocol OnBoardingModelDelegate : class  {
+    var wellcomeModel: WellcomeModel? {get}
+    var signInModel: SignInModel? {get}
+}
+class OnBoardingModel: OnBoardingModelDelegate, ModelDelegate{
+    var wellcomeModel: WellcomeModel?
+    var signInModel: SignInModel?
+    var title: String?
 }

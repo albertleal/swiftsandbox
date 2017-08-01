@@ -7,6 +7,6 @@
 //
 
 import Foundation
-struct WellcomeModel{
-    var title = "Wellcome View"
+class WellcomeModel: ModelDelegate{
+    var title: String? = "Wellcome Model"
 }

@@ -19,9 +19,13 @@
 		0B248D9E1F30678C003914A8 /* WellcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B248D9D1F30678C003914A8 /* WellcomeViewModel.swift */; };
 		0B248DA01F306798003914A8 /* WellcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B248D9F1F306798003914A8 /* WellcomeModel.swift */; };
 		0B248DA21F306A62003914A8 /* OnBoardingFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B248DA11F306A62003914A8 /* OnBoardingFlowCoordinator.swift */; };
-		0B248DA41F306DA8003914A8 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B248DA31F306DA8003914A8 /* OnBoardingModel.swift */; };
 		0B248DA61F307596003914A8 /* BootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B248DA51F307596003914A8 /* BootCoordinator.swift */; };
 		0B6D92A91F30814B00C32A50 /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D92A81F30814B00C32A50 /* Coordinable.swift */; };
+		0B6D92AC1F30B21300C32A50 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D92AB1F30B21300C32A50 /* SignInViewController.swift */; };
+		0B6D92AE1F30B24F00C32A50 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D92AD1F30B24F00C32A50 /* SignInViewModel.swift */; };
+		0B6D92B01F30B28B00C32A50 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D92AF1F30B28B00C32A50 /* SignInModel.swift */; };
+		0B6D92B21F30B44800C32A50 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D92B11F30B44800C32A50 /* ViewModel.swift */; };
+		0B7704F11F30C829006BE929 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7704F01F30C829006BE929 /* OnBoardingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +43,13 @@
 		0B248D9D1F30678C003914A8 /* WellcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewModel.swift; sourceTree = "<group>"; };
 		0B248D9F1F306798003914A8 /* WellcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeModel.swift; sourceTree = "<group>"; };
 		0B248DA11F306A62003914A8 /* OnBoardingFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFlowCoordinator.swift; sourceTree = "<group>"; };
-		0B248DA31F306DA8003914A8 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 		0B248DA51F307596003914A8 /* BootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootCoordinator.swift; sourceTree = "<group>"; };
 		0B6D92A81F30814B00C32A50 /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
+		0B6D92AB1F30B21300C32A50 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0B6D92AD1F30B24F00C32A50 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		0B6D92AF1F30B28B00C32A50 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		0B6D92B11F30B44800C32A50 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		0B7704F01F30C829006BE929 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 				0B6D92A81F30814B00C32A50 /* Coordinable.swift */,
 				0B10052A1F2E6C8C0016843C /* FlowCoordinator.swift */,
 				0B248DA51F307596003914A8 /* BootCoordinator.swift */,
+				0B6D92B11F30B44800C32A50 /* ViewModel.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -106,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				0B1005381F2E8A3D0016843C /* BootFlowModel.swift */,
-				0B248D9A1F3066D1003914A8 /* OnBoarding */,
 				0B248D9B1F3066F8003914A8 /* Private */,
+				0B248D9A1F3066D1003914A8 /* OnBoarding */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -118,8 +127,9 @@
 				0B1005301F2E76260016843C /* OnBoarding.storyboard */,
 				0B248DA11F306A62003914A8 /* OnBoardingFlowCoordinator.swift */,
 				0B248D971F2FF53F003914A8 /* OnBoardingFlowModel.swift */,
-				0B248DA31F306DA8003914A8 /* OnBoardingModel.swift */,
+				0B7704F01F30C829006BE929 /* OnBoardingModel.swift */,
 				0B248D9C1F306762003914A8 /* WellcomeView */,
+				0B6D92AA1F30B1F000C32A50 /* Sign In */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -140,6 +150,16 @@
 				0B248D9F1F306798003914A8 /* WellcomeModel.swift */,
 			);
 			path = WellcomeView;
+			sourceTree = "<group>";
+		};
+		0B6D92AA1F30B1F000C32A50 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				0B6D92AB1F30B21300C32A50 /* SignInViewController.swift */,
+				0B6D92AD1F30B24F00C32A50 /* SignInViewModel.swift */,
+				0B6D92AF1F30B28B00C32A50 /* SignInModel.swift */,
+			);
+			path = "Sign In";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,10 +237,14 @@
 				0B248DA21F306A62003914A8 /* OnBoardingFlowCoordinator.swift in Sources */,
 				0B6D92A91F30814B00C32A50 /* Coordinable.swift in Sources */,
 				0B248D9E1F30678C003914A8 /* WellcomeViewModel.swift in Sources */,
+				0B6D92B01F30B28B00C32A50 /* SignInModel.swift in Sources */,
 				0B10052B1F2E6C8C0016843C /* FlowCoordinator.swift in Sources */,
+				0B7704F11F30C829006BE929 /* OnBoardingModel.swift in Sources */,
+				0B6D92AE1F30B24F00C32A50 /* SignInViewModel.swift in Sources */,
+				0B6D92AC1F30B21300C32A50 /* SignInViewController.swift in Sources */,
 				0B1005171F2E6BFF0016843C /* WellcomeViewController.swift in Sources */,
 				0B1005391F2E8A3D0016843C /* BootFlowModel.swift in Sources */,
-				0B248DA41F306DA8003914A8 /* OnBoardingModel.swift in Sources */,
+				0B6D92B21F30B44800C32A50 /* ViewModel.swift in Sources */,
 				0B248D981F2FF53F003914A8 /* OnBoardingFlowModel.swift in Sources */,
 				0B248DA01F306798003914A8 /* WellcomeModel.swift in Sources */,
 				0B248DA61F307596003914A8 /* BootCoordinator.swift in Sources */,
