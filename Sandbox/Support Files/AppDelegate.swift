@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         DispatchQueue.global(qos: .background).async {
-            let boot = FlowCoordinator(withFlowModel: BootFlowModel(), onWindow: self.window!)
+            let boot = BootCordinator(withFlowModel: BootFlowModel(), onWindow: self.window!)
             DispatchQueue.main.async() {
                 boot.start();
             }

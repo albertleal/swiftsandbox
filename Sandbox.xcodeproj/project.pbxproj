@@ -21,6 +21,7 @@
 		0B248DA21F306A62003914A8 /* OnBoardingFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B248DA11F306A62003914A8 /* OnBoardingFlowCoordinator.swift */; };
 		0B248DA41F306DA8003914A8 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B248DA31F306DA8003914A8 /* OnBoardingModel.swift */; };
 		0B248DA61F307596003914A8 /* BootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B248DA51F307596003914A8 /* BootCoordinator.swift */; };
+		0B6D92A91F30814B00C32A50 /* Coordinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D92A81F30814B00C32A50 /* Coordinable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		0B248DA11F306A62003914A8 /* OnBoardingFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFlowCoordinator.swift; sourceTree = "<group>"; };
 		0B248DA31F306DA8003914A8 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 		0B248DA51F307596003914A8 /* BootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootCoordinator.swift; sourceTree = "<group>"; };
+		0B6D92A81F30814B00C32A50 /* Coordinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		0B1005281F2E6C5A0016843C /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				0B6D92A81F30814B00C32A50 /* Coordinable.swift */,
 				0B10052A1F2E6C8C0016843C /* FlowCoordinator.swift */,
 				0B248DA51F307596003914A8 /* BootCoordinator.swift */,
 			);
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B248DA21F306A62003914A8 /* OnBoardingFlowCoordinator.swift in Sources */,
+				0B6D92A91F30814B00C32A50 /* Coordinable.swift in Sources */,
 				0B248D9E1F30678C003914A8 /* WellcomeViewModel.swift in Sources */,
 				0B10052B1F2E6C8C0016843C /* FlowCoordinator.swift in Sources */,
 				0B1005171F2E6BFF0016843C /* WellcomeViewController.swift in Sources */,

@@ -10,23 +10,23 @@ import UIKit
 
 class WellcomeViewController: Coordinable {
     var viewModel : WellcomeViewModel?;
+    
+    override func awakeFromNib() {
+        self.coordinator = OnBoardingFlowCoordinator(withFlowModel: OnBoardingFlowModel(), onCoordinable: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Setting ViewModel
         self.viewModel = WellcomeViewModel()
+        if(self.coordinator != nil){
+            self.coordinator!.step(fromCoordinable: self);
         
-        //Initializing Flow Coordinator
-        DispatchQueue.global(qos: .background).async {
-            self.coordinator = OnBoardingFlowCoordinator(withFlowModel: OnBoardingFlowModel(), onCoordinable: self)
-            DispatchQueue.main.async() {
-                self.coordinator!.step(fromCoordinable: self);
+            // Do any additional setup after loading the view, typically from a nib.
+            if(self.viewModel?.getTitle != nil){
+                self.navigationItem.title? = (self.viewModel?.getTitle)!
             }
-        }
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        if(self.viewModel?.getTitle != nil){
-            self.navigationItem.title? = (self.viewModel?.getTitle)!
         }
     }
 

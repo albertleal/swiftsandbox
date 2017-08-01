@@ -11,9 +11,8 @@
 import UIKit
 
 
-class BootFlowModel : FlowCoordinatorModel{
+class BootFlowModel : BootCoordinatorModel{
     var storyBoardOptions: [String : CoordinableStoryBoard]?
-    var sieguesOptions: [String : CoordinableSiegues]?
     
     required init(){        
         self.storyBoardOptions = [
